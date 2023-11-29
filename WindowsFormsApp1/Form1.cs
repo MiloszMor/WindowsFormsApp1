@@ -77,8 +77,7 @@ namespace WindowsFormsApp1
 
             for(int i = 0;i < 10; i++)
             {
-                this.rnd[i]= rdm.Next();
-                
+                this.rnd[i] = rdm.Next();   
             }
         }//Losowe
 
