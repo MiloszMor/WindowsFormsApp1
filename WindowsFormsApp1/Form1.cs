@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         private int[] rnd;
+        private int[] array;
         public Form1()
         {
             InitializeComponent();
@@ -69,15 +70,15 @@ namespace WindowsFormsApp1
                  outputSorterad.AppendText(Convert.ToString(nummerlista[i]) + " ");
              }
          }*/
-
+        a
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            rnd = new int[10];
-            Random rdm = new Random();
+            array = new int[100];
+            Random rnd = new Random();
 
-            for(int i = 0;i < 10; i++)
+            for (int i = 0; i < 100; i++)
             {
-                this.rnd[i] = rdm.Next();   
+                this.array[i] = rnd.Next(1000);
             }
         }//Losowe
 
@@ -141,17 +142,26 @@ namespace WindowsFormsApp1
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-
+            ciagMalejacy.Generuj(10, 2, 5);
         }//Malejace
 
     private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
+            CiągRosnacy.Generuj(1, 2, 5);
         }//Rosnace
 
 private void chart1_Click(object sender, EventArgs e)
         {
+            chart1.Series.Clear();
+            chart1.Series.Add("Losowe Liczby");
 
+            for (int i = 0; i < array.Length; i++)
+            {
+                chart1.Series["Losowe Liczby"].Points.AddY(array[i]);
+            }
+
+            chart1.ChartAreas[0].AxisX.Title = "Indeks";
+            chart1.ChartAreas[0].AxisY.Title = "Wartość";
         }
     }
 }

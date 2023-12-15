@@ -8,20 +8,16 @@ namespace WindowsFormsApp1
 {
     internal class Losowo
     {
-        public Losowo() {
+        public int[] generujLosowe(int rozmiar)
+        {
+            int[] liczby = new int[rozmiar];
 
-            Random rnd = new Random();
-            for (int i = 0; i < 5; i++)
-            {
-                int dlugoscCiagu = rnd.Next(0, 21);
-                Console.Write("ciąg: " + (i + 1) + ": ");
-                for (int j = 0; j < dlugoscCiagu; j++)
-                {
-                    int losowaLiczba = Random.Next(0, 21);
-                    Console.Write(losowaLiczba + " ");
-                }
-                Console.WriteLine();
+            Random losoweLiczby = new Random();
+            for (int i = 0; i < rozmiar; i++) {
+                liczby[i] = losoweLiczby.Next(0, 99999)
             }
+            return liczby;
         }
     }
+}
 

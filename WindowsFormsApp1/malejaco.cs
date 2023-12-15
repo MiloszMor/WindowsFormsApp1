@@ -6,26 +6,22 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    internal class ciagMalejacy
-    {
-        public ciagMalejacy()
+  
+       internal class ciagMalejacy
         {
-
-            Random rnd = new Random();
-            for (int i = 0; i < 5; i++)
+            public static void Generuj(int poczatkowaWartosc, int krok, int iloscLiczb)
             {
-                int dlugoscCiagu = rnd.Next(0, 21);
-
-                int poprzedniaWartosc = 0;
-
-                Console.Write("ciąg: " + (i + 1) + ": ");
-                for (int j = 0; j < dlugoscCiagu; j++)
+                for (int i = 0; i < iloscLiczb; i++)
                 {
-                    int losowaLiczba = rnd.Next(poprzedniaWartosc, 21);
-                    Console.Write(losowaLiczba + " ");
-                    poprzedniaWartosc = losowaLiczba;
+
+                    int aktualnaWartosc = poczatkowaWartosc - i * krok;
+
+                    Console.WriteLine(aktualnaWartosc);
+
                 }
-                Console.WriteLine();
+
             }
-        }
+
+       }
+
 }

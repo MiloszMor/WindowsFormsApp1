@@ -6,26 +6,15 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    internal class ciagRosacy
+    class CiągRosnacy
     {
-        public ciagRosacy()
+        public static void Generuj(int poczatkowaWartosc, int krok, int iloscLiczb)
         {
-
-            Random rnd = new Random();
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < iloscLiczb; i++)
             {
-                int dlugoscCiagu = rnd.Next(0, 21);
-
-                int poprzedniaWartosc = 0;
-
-                Console.Write("ciąg: " + (i + 1) + ": ");
-                for (int j = 0; j < dlugoscCiagu; j++)
-                {
-                    int losowaLiczba = rnd.Next(poprzedniaWartosc, 21);
-                    Console.Write(losowaLiczba + " ");
-                    poprzedniaWartosc = losowaLiczba;
-                }
-                Console.WriteLine();
+                int aktualnaWartosc = poczatkowaWartosc + i * krok;
+                Console.WriteLine(aktualnaWartosc);
             }
         }
+    }
 }
