@@ -210,6 +210,7 @@ namespace WindowsFormsApp1
 
         }
 
+        
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
             throw new NotImplementedException();
@@ -234,6 +235,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.CheckBox PrzezWybor;
         private System.Windows.Forms.CheckBox Bubble;
         private System.Windows.Forms.Button Start;
+     
     }
 }
 

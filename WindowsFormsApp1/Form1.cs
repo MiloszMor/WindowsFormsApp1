@@ -36,7 +36,40 @@ namespace WindowsFormsApp1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-           //MessageBox.
+            int wielkosc = 100000;
+            int[] wylosowane = new int[wielkosc];
+            int[] rosnace = new int[wielkosc];
+            int[] malejace = new int[wielkosc];
+            chart1.ChartAreas.First().AxisY.LabelStyle.Format = "0ms";
+
+            if (this.rosnace.Checked)
+            {
+                for (int i = 1; i < wielkosc; i++)
+                {
+                    rosnace[i] = i;
+                }
+            }
+            if (this.malejaco.Checked)
+            {
+                for (int i = wielkosc - 1; i > 0; i--)
+                {
+                    malejace[i] = i;
+                }
+            }
+            if (losowe.Checked)
+            {
+                Random rnd = new Random();
+
+                int poczatek = 0;
+                int koniec = 1000;
+                for (int i = 0; i < wielkosc - 1; i++)
+                {
+
+                    wylosowane[i] = rnd.Next(poczatek, koniec);
+
+                }
+            }
+            //MessageBox.
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -70,7 +103,7 @@ namespace WindowsFormsApp1
                  outputSorterad.AppendText(Convert.ToString(nummerlista[i]) + " ");
              }
          }*/
-        a
+        
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
             array = new int[100];
@@ -150,7 +183,7 @@ namespace WindowsFormsApp1
             CiągRosnacy.Generuj(1, 2, 5);
         }//Rosnace
 
-private void chart1_Click(object sender, EventArgs e)
+    private void chart1_Click(object sender, EventArgs e)
         {
             chart1.Series.Clear();
             chart1.Series.Add("Losowe Liczby");

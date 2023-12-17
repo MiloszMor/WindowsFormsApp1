@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    internal class Losowo
+   /* internal class Losowo
     {
         public int[] generujLosowe(int rozmiar)
         {
@@ -14,10 +14,10 @@ namespace WindowsFormsApp1
 
             Random losoweLiczby = new Random();
             for (int i = 0; i < rozmiar; i++) {
-                liczby[i] = losoweLiczby.Next(0, 99999)
+                liczby[i] = losoweLiczby.Next(0, 99999);
             }
             return liczby;
         }
-    }
+    }*/
 }
 
