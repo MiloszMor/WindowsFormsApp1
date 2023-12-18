@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace zalek
 {
-    internal class Bubble
+    internal class wybsy
     {
         private static DateTime start, stop;
         public Double Duration
         {
             get
             {
-                if (start != null && stop != null)
+                if (start == null && stop != null)
                 {
                     return (stop - start).TotalMilliseconds;
                 }
@@ -23,23 +23,23 @@ namespace zalek
                 }
             }
         }
-        public void BubbleSort(int[] liczby)
+        public static void BySelection(int[] liczby)
         {
             start = DateTime.Now;
             for (int i = 0; i < liczby.Length - 1; i++)
             {
 
-                for (int j = 0; j < liczby.Length - i - 1; j++)
-                    if (liczby[j] > liczby[j + 1])
-                    {
-                        int temp = liczby[j];
-                        liczby[j] = liczby[j + 1];
-                        liczby[j + 1] = temp;
+                int min_idx = i;
+                for (int j = i + 1; j < liczby.Length; j++)
+                    if (liczby[j] < liczby[min_idx])
+                        min_idx = j;
 
-                    }
+
+                int temp = liczby[min_idx];
+                liczby[min_idx] = liczby[i];
+                liczby[i] = temp;
             }
             stop = DateTime.Now;
-
         }
     }
 }

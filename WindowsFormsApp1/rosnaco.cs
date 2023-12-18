@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    class CiągRosnacy
+   /* class CiągRosnacy
     {
         public static void Generuj(int poczatkowaWartosc, int krok, int iloscLiczb)
         {
@@ -16,5 +16,5 @@ namespace WindowsFormsApp1
                 Console.WriteLine(aktualnaWartosc);
             }
         }
-    }
+    }*/
 }

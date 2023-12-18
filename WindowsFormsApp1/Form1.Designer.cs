@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WindowsFormsApp1
+namespace zalek
 {
     partial class Form1
     {
@@ -30,20 +30,20 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Losowe = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.Losowo = new System.Windows.Forms.CheckBox();
+            this.zmiejszenie = new System.Windows.Forms.CheckBox();
+            this.rosnaco = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Scalenie = new System.Windows.Forms.CheckBox();
             this.Szybkie = new System.Windows.Forms.CheckBox();
-            this.Wstawienie = new System.Windows.Forms.CheckBox();
-            this.PrzezWybor = new System.Windows.Forms.CheckBox();
-            this.Bubble = new System.Windows.Forms.CheckBox();
+            this.wstawka = new System.Windows.Forms.CheckBox();
+            this.wybory = new System.Windows.Forms.CheckBox();
+            this.sorBubbles = new System.Windows.Forms.CheckBox();
             this.Start = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -52,16 +52,16 @@ namespace WindowsFormsApp1
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(242, 12);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(546, 426);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -69,9 +69,9 @@ namespace WindowsFormsApp1
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.Losowe);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.Losowo);
+            this.groupBox1.Controls.Add(this.zmiejszenie);
+            this.groupBox1.Controls.Add(this.rosnaco);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
@@ -80,46 +80,46 @@ namespace WindowsFormsApp1
             this.groupBox1.Text = "Rodzaj ciagu";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // Losowe
+            // Losowo
             // 
-            this.Losowe.AutoSize = true;
-            this.Losowe.Location = new System.Drawing.Point(7, 68);
-            this.Losowe.Name = "Losowe";
-            this.Losowe.Size = new System.Drawing.Size(63, 17);
-            this.Losowe.TabIndex = 2;
-            this.Losowe.Text = "Losowe";
-            this.Losowe.UseVisualStyleBackColor = true;
-            this.Losowe.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            this.Losowo.AutoSize = true;
+            this.Losowo.Location = new System.Drawing.Point(7, 68);
+            this.Losowo.Name = "Losowo";
+            this.Losowo.Size = new System.Drawing.Size(63, 17);
+            this.Losowo.TabIndex = 2;
+            this.Losowo.Text = "Losowe";
+            this.Losowo.UseVisualStyleBackColor = true;
+            this.Losowo.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
-            // checkBox2
+            // zmiejszenie
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(6, 43);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(69, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Malejące";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.zmiejszenie.AutoSize = true;
+            this.zmiejszenie.Location = new System.Drawing.Point(6, 43);
+            this.zmiejszenie.Name = "zmiejszenie";
+            this.zmiejszenie.Size = new System.Drawing.Size(69, 17);
+            this.zmiejszenie.TabIndex = 1;
+            this.zmiejszenie.Text = "Malejące";
+            this.zmiejszenie.UseVisualStyleBackColor = true;
+            this.zmiejszenie.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
-            // checkBox1
+            // rosnaco
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(7, 20);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(69, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Rosnące";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.rosnaco.AutoSize = true;
+            this.rosnaco.Location = new System.Drawing.Point(7, 20);
+            this.rosnaco.Name = "rosnaco";
+            this.rosnaco.Size = new System.Drawing.Size(69, 17);
+            this.rosnaco.TabIndex = 0;
+            this.rosnaco.Text = "Rosnące";
+            this.rosnaco.UseVisualStyleBackColor = true;
+            this.rosnaco.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.Scalenie);
             this.groupBox2.Controls.Add(this.Szybkie);
-            this.groupBox2.Controls.Add(this.Wstawienie);
-            this.groupBox2.Controls.Add(this.PrzezWybor);
-            this.groupBox2.Controls.Add(this.Bubble);
+            this.groupBox2.Controls.Add(this.wstawka);
+            this.groupBox2.Controls.Add(this.wybory);
+            this.groupBox2.Controls.Add(this.sorBubbles);
             this.groupBox2.Location = new System.Drawing.Point(12, 118);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 159);
@@ -147,38 +147,36 @@ namespace WindowsFormsApp1
             this.Szybkie.TabIndex = 3;
             this.Szybkie.Text = "Szybkie";
             this.Szybkie.UseVisualStyleBackColor = true;
-            this.Szybkie.CheckedChanged += new System.EventHandler(this.Szybkie_CheckedChanged);
             // 
-            // Wstawienie
+            // wstawka
             // 
-            this.Wstawienie.AutoSize = true;
-            this.Wstawienie.Location = new System.Drawing.Point(7, 82);
-            this.Wstawienie.Name = "Wstawienie";
-            this.Wstawienie.Size = new System.Drawing.Size(107, 17);
-            this.Wstawienie.TabIndex = 2;
-            this.Wstawienie.Text = "Przez wstawienie";
-            this.Wstawienie.UseVisualStyleBackColor = true;
+            this.wstawka.AutoSize = true;
+            this.wstawka.Location = new System.Drawing.Point(7, 82);
+            this.wstawka.Name = "wstawka";
+            this.wstawka.Size = new System.Drawing.Size(107, 17);
+            this.wstawka.TabIndex = 2;
+            this.wstawka.Text = "Przez wstawienie";
+            this.wstawka.UseVisualStyleBackColor = true;
             // 
-            // PrzezWybor
+            // wybory
             // 
-            this.PrzezWybor.AutoSize = true;
-            this.PrzezWybor.Location = new System.Drawing.Point(7, 58);
-            this.PrzezWybor.Name = "PrzezWybor";
-            this.PrzezWybor.Size = new System.Drawing.Size(83, 17);
-            this.PrzezWybor.TabIndex = 1;
-            this.PrzezWybor.Text = "Przez wybor";
-            this.PrzezWybor.UseVisualStyleBackColor = true;
+            this.wybory.AutoSize = true;
+            this.wybory.Location = new System.Drawing.Point(7, 58);
+            this.wybory.Name = "wybory";
+            this.wybory.Size = new System.Drawing.Size(83, 17);
+            this.wybory.TabIndex = 1;
+            this.wybory.Text = "Przez wybor";
+            this.wybory.UseVisualStyleBackColor = true;
             // 
-            // Bubble
+            // sorBubbles
             // 
-            this.Bubble.AutoSize = true;
-            this.Bubble.Location = new System.Drawing.Point(7, 34);
-            this.Bubble.Name = "Bubble";
-            this.Bubble.Size = new System.Drawing.Size(59, 17);
-            this.Bubble.TabIndex = 0;
-            this.Bubble.Text = "Bubble";
-            this.Bubble.UseVisualStyleBackColor = true;
-            this.Bubble.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            this.sorBubbles.AutoSize = true;
+            this.sorBubbles.Location = new System.Drawing.Point(7, 34);
+            this.sorBubbles.Name = "sorBubbles";
+            this.sorBubbles.Size = new System.Drawing.Size(59, 17);
+            this.sorBubbles.TabIndex = 0;
+            this.sorBubbles.Text = "Bubble";
+            this.sorBubbles.UseVisualStyleBackColor = true;
             // 
             // Start
             // 
@@ -210,32 +208,23 @@ namespace WindowsFormsApp1
 
         }
 
-        
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
 
-        private void Szybkie_CheckedChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
+       
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox rosnaco;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox Losowe;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox Losowo;
+        private System.Windows.Forms.CheckBox zmiejszenie;
         private System.Windows.Forms.CheckBox Scalenie;
         private System.Windows.Forms.CheckBox Szybkie;
-        private System.Windows.Forms.CheckBox Wstawienie;
-        private System.Windows.Forms.CheckBox PrzezWybor;
-        private System.Windows.Forms.CheckBox Bubble;
+        private System.Windows.Forms.CheckBox wstawka;
+        private System.Windows.Forms.CheckBox wybory;
+        private System.Windows.Forms.CheckBox sorBubbles;
         private System.Windows.Forms.Button Start;
-     
+
     }
 }
 

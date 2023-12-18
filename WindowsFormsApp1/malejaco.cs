@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-  
+  /*
        internal class ciagMalejacy
         {
             public static void Generuj(int poczatkowaWartosc, int krok, int iloscLiczb)
@@ -23,5 +23,5 @@ namespace WindowsFormsApp1
             }
 
        }
-
+  */
 }
