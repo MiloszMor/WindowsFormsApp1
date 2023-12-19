@@ -8,7 +8,7 @@ namespace zalek
 {
     internal class czas
     {
-        private DateTime start, stop;
+        private static DateTime start, stop;
         public Double Duration
         {
             get
@@ -24,12 +24,12 @@ namespace zalek
             }
         }
 
-        public void StartCount()
+        public static void StartCount()
         {
             start = DateTime.Now;
         }
 
-        public void StopCount()
+        public static void StopCount()
         {
             stop = DateTime.Now;
         }

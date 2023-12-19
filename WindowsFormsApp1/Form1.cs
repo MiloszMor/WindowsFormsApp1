@@ -38,6 +38,8 @@ namespace zalek
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            chart1.Series.Clear();
+
             int wielkosc = 100000;
             int[] wylosowane = new int[wielkosc];
             int[] rosnaco = new int[wielkosc];

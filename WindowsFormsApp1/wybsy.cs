@@ -6,40 +6,30 @@ using System.Threading.Tasks;
 
 namespace zalek
 {
-    internal class wybsy
+    internal class wybsy : czas
     {
-        private static DateTime start, stop;
-        public Double Duration
-        {
-            get
-            {
-                if (start == null && stop != null)
-                {
-                    return (stop - start).TotalMilliseconds;
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-        }
         public static void BySelection(int[] liczby)
         {
-            start = DateTime.Now;
+            int[] dos = new int[liczby.Length];
+            for (int k = 0; k < liczby.Length; k++)
+            {
+                dos[k] = liczby[k];
+            }
+            StartCount();
             for (int i = 0; i < liczby.Length - 1; i++)
             {
 
                 int min_idx = i;
                 for (int j = i + 1; j < liczby.Length; j++)
-                    if (liczby[j] < liczby[min_idx])
+                    if (dos[j] < dos[min_idx])
                         min_idx = j;
 
 
-                int temp = liczby[min_idx];
-                liczby[min_idx] = liczby[i];
-                liczby[i] = temp;
+                int temp = dos[min_idx];
+                dos[min_idx] = dos[i];
+                dos[i] = temp;
             }
-            stop = DateTime.Now;
+            StopCount();
         }
     }
 }
