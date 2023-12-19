@@ -43,7 +43,7 @@ namespace kolokwium
                 MessageBox.Show("Jaki ciąg wybierasz?");
                 return;
             }
-            if (!sorBubbles.Checked && !wybory.Checked && !wstawka.Checked && !Szybkie.Checked && !Scalenie.Checked)
+            if (!sorBubbles.Checked && !wybory.Checked && !wstawienie.Checked && !Szybkie.Checked && !Scalenie.Checked)
             {
                 MessageBox.Show("Jaki algorytm wybierasz?");
                 return;
@@ -133,7 +133,7 @@ namespace kolokwium
                 chart1.Series.Add(seria);
             }
 
-            if (wstawka.Checked)
+            if (wstawienie.Checked)
             {
                 if (rosn.Checked)
                 {

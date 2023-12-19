@@ -30,9 +30,9 @@ namespace kolokwium
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Losowo = new System.Windows.Forms.CheckBox();
@@ -41,7 +41,7 @@ namespace kolokwium
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Scalenie = new System.Windows.Forms.CheckBox();
             this.Szybkie = new System.Windows.Forms.CheckBox();
-            this.wstawka = new System.Windows.Forms.CheckBox();
+            this.wstawienie = new System.Windows.Forms.CheckBox();
             this.wybory = new System.Windows.Forms.CheckBox();
             this.sorBubbles = new System.Windows.Forms.CheckBox();
             this.Start = new System.Windows.Forms.Button();
@@ -53,16 +53,16 @@ namespace kolokwium
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(242, 12);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(546, 426);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -113,7 +113,7 @@ namespace kolokwium
             // 
             this.groupBox2.Controls.Add(this.Scalenie);
             this.groupBox2.Controls.Add(this.Szybkie);
-            this.groupBox2.Controls.Add(this.wstawka);
+            this.groupBox2.Controls.Add(this.wstawienie);
             this.groupBox2.Controls.Add(this.wybory);
             this.groupBox2.Controls.Add(this.sorBubbles);
             this.groupBox2.Location = new System.Drawing.Point(12, 173);
@@ -144,15 +144,15 @@ namespace kolokwium
             this.Szybkie.Text = "Szybkie";
             this.Szybkie.UseVisualStyleBackColor = true;
             // 
-            // wstawka
+            // wstawienie
             // 
-            this.wstawka.AutoSize = true;
-            this.wstawka.Location = new System.Drawing.Point(7, 82);
-            this.wstawka.Name = "wstawka";
-            this.wstawka.Size = new System.Drawing.Size(107, 17);
-            this.wstawka.TabIndex = 2;
-            this.wstawka.Text = "Przez wstawienie";
-            this.wstawka.UseVisualStyleBackColor = true;
+            this.wstawienie.AutoSize = true;
+            this.wstawienie.Location = new System.Drawing.Point(7, 82);
+            this.wstawienie.Name = "wstawienie";
+            this.wstawienie.Size = new System.Drawing.Size(107, 17);
+            this.wstawienie.TabIndex = 2;
+            this.wstawienie.Text = "Przez wstawienie";
+            this.wstawienie.UseVisualStyleBackColor = true;
             // 
             // wybory
             // 
@@ -223,7 +223,7 @@ namespace kolokwium
         private System.Windows.Forms.CheckBox zmiejszenie;
         private System.Windows.Forms.CheckBox Scalenie;
         private System.Windows.Forms.CheckBox Szybkie;
-        private System.Windows.Forms.CheckBox wstawka;
+        private System.Windows.Forms.CheckBox wstawienie;
         private System.Windows.Forms.CheckBox wybory;
         private System.Windows.Forms.CheckBox sorBubbles;
         private System.Windows.Forms.Button Start;
