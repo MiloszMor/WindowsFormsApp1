@@ -65,7 +65,7 @@ namespace zalek
             this.chart1.Size = new System.Drawing.Size(546, 426);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
-            this.chart1.Click += new System.EventHandler(this.chart1_Click);
+//            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // groupBox1
             // 
@@ -78,7 +78,7 @@ namespace zalek
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Rodzaj ciagu";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+//            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // Losowo
             // 
@@ -89,7 +89,7 @@ namespace zalek
             this.Losowo.TabIndex = 2;
             this.Losowo.Text = "Losowe";
             this.Losowo.UseVisualStyleBackColor = true;
-            this.Losowo.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+//            this.Losowo.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // zmiejszenie
             // 
@@ -100,7 +100,7 @@ namespace zalek
             this.zmiejszenie.TabIndex = 1;
             this.zmiejszenie.Text = "Malejące";
             this.zmiejszenie.UseVisualStyleBackColor = true;
-            this.zmiejszenie.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+//            this.zmiejszenie.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // rosnaco
             // 
@@ -111,7 +111,7 @@ namespace zalek
             this.rosnaco.TabIndex = 0;
             this.rosnaco.Text = "Rosnące";
             this.rosnaco.UseVisualStyleBackColor = true;
-            this.rosnaco.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+//            this.rosnaco.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // groupBox2
             // 

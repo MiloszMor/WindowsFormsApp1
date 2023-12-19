@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace zalek
 {
-    internal class Bubble
+    internal class Bubble : czas
     {
-        private static DateTime start, stop;
+       /* private static DateTime start, stop;
         public Double Duration
         {
             get
@@ -22,10 +22,17 @@ namespace zalek
                     return 0;
                 }
             }
-        }
+        }*/
         public void BubbleSort(int[] liczby)
         {
-            start = DateTime.Now;
+            int[] dos = new int[liczby.Length];
+            for (int k = 0; k < liczby.Length; k++)
+            {
+                dos[k] = liczby[k];
+            }
+
+            StartCount();
+
             for (int i = 0; i < liczby.Length - 1; i++)
             {
 
@@ -38,7 +45,8 @@ namespace zalek
 
                     }
             }
-            stop = DateTime.Now;
+
+            StopCount();
 
         }
     }

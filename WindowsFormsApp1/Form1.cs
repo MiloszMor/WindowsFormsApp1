@@ -18,6 +18,7 @@ namespace zalek
         public Form1()
         {
             InitializeComponent();
+            chart1.Series.Clear();
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -37,7 +38,7 @@ namespace zalek
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            int wielkosc = 1000;
+            int wielkosc = 100000;
             int[] wylosowane = new int[wielkosc];
             int[] rosnaco = new int[wielkosc];
             int[] malejace = new int[wielkosc];
@@ -62,7 +63,7 @@ namespace zalek
                 Random rnd = new Random();
 
                 int poczatek = 0;
-                int koniec = 101;
+                int koniec = wielkosc + 1;
                 for (int i = 0; i < wielkosc - 1; i++)
                 {
 
@@ -126,27 +127,51 @@ namespace zalek
                 if (this.rosnaco.Checked)
                 {
                     wybsy.BySelection(rosnaco);
-                    Series pwr = new Series("WSTAWIANIE-rosnancy");
+                    Series pwr = new Series("MojeWybory-rosnancy");
                     pwr.Points.Add(pw.Duration);
                     chart1.Series.Add(pwr);
                 }
                 if (this.zmiejszenie.Checked)
                 {
                     wybsy.BySelection(malejace);
-                    Series wm = new Series("WSTAWIANIE-malejace");
+                    Series wm = new Series("MojeWybory-malejace");
                     wm.Points.Add(pw.Duration);
                     chart1.Series.Add(wm);
                 }
                 if (Losowo.Checked)
                 {
                     wybsy.BySelection(wylosowane);
-                    Series ws = new Series("WSTAWIANIE-wylosowane");
+                    Series ws = new Series("MojeWybory-wylosowane");
                     ws.Points.Add(pw.Duration);
                     chart1.Series.Add(ws);
                 }
-
+                if (Szybkie.Checked)
+                {
+                    sortszybki s = new sortszybki();
+                    if (this.rosnaco.Checked)
+                    {
+                        s.QuickSort(rosnaco, 0, wielkosc - 1);
+                        Series sr = new Series("szybkie-rosnace");
+                        sr.Points.Add(s.Duration);
+                        chart1.Series.Add(sr);
+                    }
+                    if (this.zmiejszenie.Checked)
+                    {
+                        s.QuickSort(malejace, 0, wielkosc - 1);
+                        Series sm = new Series("szybkie-malejace");
+                        sm.Points.Add(s.Duration);
+                        chart1.Series.Add(sm);
+                    }
+                    if (Losowo.Checked)
+                    {
+                        s.QuickSort(wylosowane, 0, wielkosc - 1);
+                        Series ss = new Series("szybkie-losowe");
+                        ss.Points.Add(s.Duration);
+                        chart1.Series.Add(ss);
+                    }
+                }
+                //MessageBox.
             }
-            //MessageBox.
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -204,7 +229,8 @@ namespace zalek
 
     private void chart1_Click(object sender, EventArgs e)
         {
-           /* chart1.Series.Clear();
+           /* 
+            chart1.Series.Clear();
             chart1.Series.Add("Losowe Liczby");
 
             for (int i = 0; i < array.Length; i++)
@@ -213,7 +239,8 @@ namespace zalek
             }
 
             chart1.ChartAreas[0].AxisX.Title = "Indeks";
-            chart1.ChartAreas[0].AxisY.Title = "Wartość"; */
+            chart1.ChartAreas[0].AxisY.Title = "Wartość"; 
+           */
         }
     }
 }
