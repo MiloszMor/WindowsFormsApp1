@@ -4,43 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace zalek
+namespace kolokwium
 {
-    internal class PrzezWstawianie
+    internal class PrzezWstawianie : czas
     {
-        private DateTime start, stop;
-        public Double Duration
-        {
-            get
-            {
-                if (start != null && stop != null)
-                {
-                    return 1 + (stop - start).TotalMilliseconds;
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-        }
-
+        
         public void InsertionSort(int[] liczby)
         {
-            start = DateTime.Now;
-            for (int i = 1; i < liczby.Length; ++i)
-            {
-                int current = liczby[i];
-                int j = i - 1;
-
-                while (j >= 0 && liczby[j] > current)
+             int[] dos = new int[liczby.Length];
+                for (int k = 0; k < liczby.Length; k++)
                 {
-                    liczby[j + 1] = liczby[j];
-                    j = j - 1;
+                    dos[k] = liczby[k];
                 }
+                odlicz();
+                for (int i = 1; i < liczby.Length; ++i)
+                {
+                    int current = dos[i];
+                    int j = i - 1;
 
-                liczby[j + 1] = current;
-            }
-            stop = DateTime.Now;
+                    while (j >= 0 && dos[j] > current)
+                    {
+                        dos[j + 1] = dos[j];
+                        j = j - 1;
+                    }
+
+                    dos[j + 1] = current;
+                }
+                stop();
         }
     }
 }

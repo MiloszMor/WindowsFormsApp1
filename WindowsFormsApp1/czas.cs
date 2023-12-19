@@ -4,18 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace zalek
+namespace kolokwium
 {
     internal class czas
     {
-        private static DateTime start, stop;
-        public Double Duration
+        private static DateTime odliczaj, skoncz;
+
+        public double Zhonyi
         {
             get
             {
-                if (start != null && stop != null)
+                if (odliczaj != default && skoncz != default)
                 {
-                    return (stop - start).TotalMilliseconds;
+                    return (skoncz - odliczaj).TotalMilliseconds;
                 }
                 else
                 {
@@ -24,14 +25,15 @@ namespace zalek
             }
         }
 
-        public static void StartCount()
+        public static void odlicz()
         {
-            start = DateTime.Now;
+            odliczaj = DateTime.Now;
         }
 
-        public static void StopCount()
+        public static void stop()
         {
-            stop = DateTime.Now;
+            skoncz = DateTime.Now;
         }
     }
+
 }

@@ -4,26 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace zalek
+namespace kolokwium
 {
     internal class Bubble : czas
     {
-       /* private static DateTime start, stop;
-        public Double Duration
-        {
-            get
-            {
-                if (start != null && stop != null)
-                {
-                    return (stop - start).TotalMilliseconds;
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-        }*/
-        public void BubbleSort(int[] liczby)
+        public void srtBubble(int[] liczby)
         {
             int[] dos = new int[liczby.Length];
             for (int k = 0; k < liczby.Length; k++)
@@ -31,7 +16,7 @@ namespace zalek
                 dos[k] = liczby[k];
             }
 
-            StartCount();
+            odlicz();
 
             for (int i = 0; i < liczby.Length - 1; i++)
             {
@@ -46,7 +31,7 @@ namespace zalek
                     }
             }
 
-            StopCount();
+            stop();
 
         }
     }

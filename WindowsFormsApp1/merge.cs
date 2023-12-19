@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using zalek;
+using kolokwium;
 
-namespace sortowanie
+namespace kolokwium
 {
-    internal class Scalanie : czas
+    internal class marge : czas
     {
-        public void MergingSortMian(int[] liczby, int left, int right)
+        public void srtmarge(int[] liczby, int left, int right)
         {
             int[] dos = new int[liczby.Length];
             for (int k = 0; k < liczby.Length; k++)
             {
                 dos[k] = liczby[k];
             }
-            StartCount();
-            merging_sort(dos, left, right);
-            StopCount();
+            odlicz();
+            scalanie2(dos, left, right);
+            stop();
         }
-        public void merge(int[] dos, int left, int mid, int right)
+        public void scal(int[] dos, int left, int mid, int right)
         {
             int i = left, j = mid + 1;
 
@@ -55,7 +55,7 @@ namespace sortowanie
                     dos[k] = pom[j++];
                 }
         }
-        public void merging_sort(int[] dos, int left, int right)
+        public void scalanie2(int[] dos, int left, int right)
         {
 
             if (right <= left)
@@ -66,11 +66,12 @@ namespace sortowanie
             int srodek = (right + left) / 2;
 
 
-            merging_sort(dos, left, srodek);
-            merging_sort(dos, srodek + 1, right);
+            scalanie2(dos, left, srodek);
+            scalanie2(dos, srodek + 1, right);
 
 
-            merge(dos, left, srodek, right);
+            scal(dos, left, srodek, right);
         }
+
     }
 }

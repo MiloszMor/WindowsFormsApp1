@@ -4,24 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms.DataVisualization.Charting;
-using zalek;
+using kolokwium;
 
-namespace zalek
+namespace kolokwium
 {
-    internal class sortszybki : czas
+    internal class srtszybki : czas
     {
-        public void QuickSort(int[] liczby, int left, int right)
+        public void qckSort(int[] liczby, int left, int right)
         {
             int[] dos = new int[liczby.Length];
             for (int k = 0; k < liczby.Length; k++)
             {
                 dos[k] = liczby[k];
             }
-            StartCount();
-            QuickSortv2(dos, left, right);
-            StopCount();
+            odlicz();
+            quickSort(dos, left, right);
+            stop();
         }
-        public void QuickSortv2(int[] szybkieliczby, int left, int right)
+        public void quickSort(int[] szybkieliczby, int left, int right)
         {
             int i = left;
             int j = right;
@@ -37,8 +37,8 @@ namespace zalek
                     szybkieliczby[j--] = tmp;
                 }
             }
-            if (left < j) QuickSortv2(szybkieliczby, left, j);
-            if (i < right) QuickSortv2(szybkieliczby, i, right);
+            if (left < j) quickSort(szybkieliczby, left, j);
+            if (i < right) quickSort(szybkieliczby, i, right);
         }
     }
 }

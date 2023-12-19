@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace zalek
+namespace kolokwium
 {
     partial class Form1
     {
@@ -37,7 +37,7 @@ namespace zalek
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Losowo = new System.Windows.Forms.CheckBox();
             this.zmiejszenie = new System.Windows.Forms.CheckBox();
-            this.rosnaco = new System.Windows.Forms.CheckBox();
+            this.rosn = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Scalenie = new System.Windows.Forms.CheckBox();
             this.Szybkie = new System.Windows.Forms.CheckBox();
@@ -45,6 +45,7 @@ namespace zalek
             this.wybory = new System.Windows.Forms.CheckBox();
             this.sorBubbles = new System.Windows.Forms.CheckBox();
             this.Start = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -70,7 +71,7 @@ namespace zalek
             // 
             this.groupBox1.Controls.Add(this.Losowo);
             this.groupBox1.Controls.Add(this.zmiejszenie);
-            this.groupBox1.Controls.Add(this.rosnaco);
+            this.groupBox1.Controls.Add(this.rosn);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
@@ -98,15 +99,15 @@ namespace zalek
             this.zmiejszenie.Text = "Malejące";
             this.zmiejszenie.UseVisualStyleBackColor = true;
             // 
-            // rosnaco
+            // rosn
             // 
-            this.rosnaco.AutoSize = true;
-            this.rosnaco.Location = new System.Drawing.Point(7, 20);
-            this.rosnaco.Name = "rosnaco";
-            this.rosnaco.Size = new System.Drawing.Size(69, 17);
-            this.rosnaco.TabIndex = 0;
-            this.rosnaco.Text = "Rosnące";
-            this.rosnaco.UseVisualStyleBackColor = true;
+            this.rosn.AutoSize = true;
+            this.rosn.Location = new System.Drawing.Point(7, 20);
+            this.rosn.Name = "rosn";
+            this.rosn.Size = new System.Drawing.Size(69, 17);
+            this.rosn.TabIndex = 0;
+            this.rosn.Text = "Rosnące";
+            this.rosn.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -115,7 +116,7 @@ namespace zalek
             this.groupBox2.Controls.Add(this.wstawka);
             this.groupBox2.Controls.Add(this.wybory);
             this.groupBox2.Controls.Add(this.sorBubbles);
-            this.groupBox2.Location = new System.Drawing.Point(12, 118);
+            this.groupBox2.Location = new System.Drawing.Point(12, 173);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 159);
             this.groupBox2.TabIndex = 2;
@@ -175,7 +176,7 @@ namespace zalek
             // 
             // Start
             // 
-            this.Start.Location = new System.Drawing.Point(76, 360);
+            this.Start.Location = new System.Drawing.Point(70, 382);
             this.Start.Name = "Start";
             this.Start.Size = new System.Drawing.Size(75, 23);
             this.Start.TabIndex = 3;
@@ -183,11 +184,19 @@ namespace zalek
             this.Start.UseVisualStyleBackColor = true;
             this.Start.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(55, 131);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Start);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -200,6 +209,7 @@ namespace zalek
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -207,7 +217,7 @@ namespace zalek
        
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox rosnaco;
+        private System.Windows.Forms.CheckBox rosn;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox Losowo;
         private System.Windows.Forms.CheckBox zmiejszenie;
@@ -218,6 +228,7 @@ namespace zalek
         private System.Windows.Forms.CheckBox sorBubbles;
         private System.Windows.Forms.Button Start;
         public System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
