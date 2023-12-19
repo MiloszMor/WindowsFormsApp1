@@ -1,4 +1,5 @@
-﻿using System;
+﻿using sortowanie;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,38 +14,34 @@ namespace zalek
 {
     public partial class Form1 : Form
     {
-        //private int[] rnd;
-        //private int[] array;
+     
         public Form1()
         {
             InitializeComponent();
-            chart1.Series.Clear();
+            chart1.Series.Clear(); 
         }
-
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
 
         }
-
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             chart1.Series.Clear();
-
-            int wielkosc = 1000;
+        
+            int wielkosc = 10000;
             int[] wylosowane = new int[wielkosc];
             int[] rosnaco = new int[wielkosc];
             int[] malejace = new int[wielkosc];
             chart1.ChartAreas.First().AxisY.LabelStyle.Format = "0ms";
+            
 
             if (this.rosnaco.Checked)
             {
@@ -78,10 +75,12 @@ namespace zalek
                 Bubble b = new Bubble();
                 if (this.rosnaco.Checked)
                 {
+
                     b.BubbleSort(rosnaco);
                     Series br = new Series("babelkowe-rosnace");
                     br.Points.Add(b.Duration);
                     chart1.Series.Add(br);
+                   
                 }
                 if (this.zmiejszenie.Checked)
                 {
@@ -171,102 +170,34 @@ namespace zalek
                         ss.Points.Add(s.Duration);
                         chart1.Series.Add(ss);
                     }
-                    if (scalenie.Checked)
+                    if (Scalenie.Checked)
                     {
-                        merge m = new merge();
+                        Scalanie sc = new Scalanie();
                         if (this.rosnaco.Checked)
                         {
-                            merge.MergeSort(rosnaco);
-                            Series pwr = new Series("MojeWybory-rosnancy");
-                            pwr.Points.Add(m.Duration);
-                            chart1.Series.Add(pwr);
+                            sc.MergingSortMian(rosnaco, 0, wielkosc - 1);
+                            Series scr = new Series("scalanie-rosnace" + sc.Duration + "ms");
+                            scr.Points.Add(sc.Duration);
+                            chart1.Series.Add(scr);
                         }
                         if (this.zmiejszenie.Checked)
                         {
-                            merge.MergeSort(malejace);
-                            Series wm = new Series("MojeWybory-malejace");
-                            wm.Points.Add(pw.Duration);
-                            chart1.Series.Add(wm);
+                            sc.MergingSortMian(malejace, 0, wielkosc - 1);
+                            Series scm = new Series("scalanie-malejace" + sc.Duration + "ms");
+                            scm.Points.Add(sc.Duration);
+                            chart1.Series.Add(scm);
                         }
                         if (Losowo.Checked)
                         {
-                            wybsy.BySelection(wylosowane);
-                            Series ws = new Series("MojeWybory-wylosowane");
-                            ws.Points.Add(pw.Duration);
-                            chart1.Series.Add(ws);
+                            sc.MergingSortMian(wylosowane, 0, wielkosc - 1);
+                            Series scs = new Series("scalanie-losowe" + sc.Duration + "ms");
+                            scs.Points.Add(sc.Duration);
+                            chart1.Series.Add(scs);
                         }
                     }
-                //MessageBox.
+
+                }
             }
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        
-        /* {
-             for (int i = 0; i < nummerlista.Count; i++)
-             {
-                 output.AppendText(Convert.ToString(nummerlista[i]) + " ");
-             }
-             int t = 0;
-             for (int v = 0; v < nummerlista.Count; v++)
-             {
-                 for (int c = 0; c < nummerlista.Count; c++)
-                 {
-                     if (nummerlista[v] < nummerlista[c])
-                     {
-                         t = nummerlista[v];
-
-                         nummerlista[v] = nummerlista[c];
-
-                         nummerlista[c] = t;
-                     }
-                 }
-             }
-             for (int i = 0; i < nummerlista.Count; i++)
-             {
-                 outputSorterad.AppendText(Convert.ToString(nummerlista[i]) + " ");
-             }
-         }*/
-        
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-           /* array = new int[100];
-            Random rnd = new Random();
-
-            for (int i = 0; i < 100; i++)
-            {
-                this.array[i] = rnd.Next(1000);
-            } */
-        }//Losowe
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            //ciagMalejacy.Generuj(10, 2, 5);
-        }//Malejace
-
-    private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            //CiągRosnacy.Generuj(1, 2, 5);
-        }//Rosnace
-
-    private void chart1_Click(object sender, EventArgs e)
-        {
-           /* 
-            chart1.Series.Clear();
-            chart1.Series.Add("Losowe Liczby");
-
-            for (int i = 0; i < array.Length; i++)
-            {
-                chart1.Series["Losowe Liczby"].Points.AddY(array[i]);
-            }
-
-            chart1.ChartAreas[0].AxisX.Title = "Indeks";
-            chart1.ChartAreas[0].AxisY.Title = "Wartość"; 
-           */
         }
     }
 }

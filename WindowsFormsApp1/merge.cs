@@ -3,75 +3,74 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using zalek;
 
-namespace zalek
+namespace sortowanie
 {
-    internal class merge : czas
+    internal class Scalanie : czas
     {
-        public void Sortowanie(int[] liczby);
-
-        int[] dos = new int[liczby.Length];
-            for (int k = 0; k<liczby.Length; k++)
+        public void MergingSortMian(int[] liczby, int left, int right)
+        {
+            int[] dos = new int[liczby.Length];
+            for (int k = 0; k < liczby.Length; k++)
             {
                 dos[k] = liczby[k];
             }
-
-    StartCount();
-    public static void MergeSort(int left, int right)
-        {
-            if (left < right)
-            {
-                int mid = (left + right) / 2;
-
-                MergeSort(left, mid);
-                MergeSort(mid + 1, right);
-
-                Sort(left, mid, right);
-            }
+            StartCount();
+            merging_sort(dos, left, right);
+            StopCount();
         }
-        private void Sort(int left, int mid, int right)
+        public void merge(int[] dos, int left, int mid, int right)
         {
-            int n1 = mid - left + 1;
-            int n2 = right - mid;
+            int i = left, j = mid + 1;
 
-            int[] leftArray = new int[n1];
-            int[] rightArray = new int[n2];
+            int[] pom = new int[dos.Length];
 
-            Array.Copy(tab, left, leftArray, 0, n1);
-            Array.Copy(tab, mid + 1, rightArray, 0, n2);
-
-            int i = 0, j = 0;
-            int k = left;
-
-            while (i < n1 && j < n2)
+            for (int m = left; m < dos.Length; m++)
             {
-                if (leftArray[i] <= rightArray[j])
+                pom[m] = dos[m];
+            }
+
+            for (int k = left; k <= right; k++)
+                if (i <= mid)
                 {
-                    tab[k] = leftArray[i];
-                    i++;
+                    if (j <= right)
+                    {
+                        if (pom[j] < pom[i])
+                        {
+                            dos[k] = pom[j++];
+                        }
+                        else
+                        {
+                            dos[k] = pom[i++];
+                        }
+                    }
+                    else
+                    {
+                        dos[k] = pom[i++];
+                    }
                 }
                 else
                 {
-                    tab[k] = rightArray[j];
-                    j++;
+                    dos[k] = pom[j++];
                 }
-                k++;
+        }
+        public void merging_sort(int[] dos, int left, int right)
+        {
+
+            if (right <= left)
+            {
+                return;
             }
 
-            while (i < n1)
-            {
-                tab[k] = leftArray[i];
-                i++;
-                k++;
-            }
+            int srodek = (right + left) / 2;
 
-            while (j < n2)
-            {
-                tab[k] = rightArray[j];
-                j++;
-                k++;
-            }
+
+            merging_sort(dos, left, srodek);
+            merging_sort(dos, srodek + 1, right);
+
+
+            merge(dos, left, srodek, right);
         }
     }
 }
