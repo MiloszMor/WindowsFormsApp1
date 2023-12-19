@@ -171,7 +171,31 @@ namespace zalek
                         ss.Points.Add(s.Duration);
                         chart1.Series.Add(ss);
                     }
-                }
+                    if (scalenie.Checked)
+                    {
+                        merge m = new merge();
+                        if (this.rosnaco.Checked)
+                        {
+                            merge.MergeSort(rosnaco);
+                            Series pwr = new Series("MojeWybory-rosnancy");
+                            pwr.Points.Add(m.Duration);
+                            chart1.Series.Add(pwr);
+                        }
+                        if (this.zmiejszenie.Checked)
+                        {
+                            merge.MergeSort(malejace);
+                            Series wm = new Series("MojeWybory-malejace");
+                            wm.Points.Add(pw.Duration);
+                            chart1.Series.Add(wm);
+                        }
+                        if (Losowo.Checked)
+                        {
+                            wybsy.BySelection(wylosowane);
+                            Series ws = new Series("MojeWybory-wylosowane");
+                            ws.Points.Add(pw.Duration);
+                            chart1.Series.Add(ws);
+                        }
+                    }
                 //MessageBox.
             }
         }

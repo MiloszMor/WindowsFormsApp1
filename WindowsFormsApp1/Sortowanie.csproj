@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="merge.cs" />
     <Compile Include="PrzezWstawianie.cs" />
     <Compile Include="czas.cs" />
     <Compile Include="sortszybki.cs" />
