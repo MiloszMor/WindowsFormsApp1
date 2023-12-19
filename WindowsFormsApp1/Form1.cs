@@ -40,7 +40,7 @@ namespace zalek
         {
             chart1.Series.Clear();
 
-            int wielkosc = 100000;
+            int wielkosc = 1000;
             int[] wylosowane = new int[wielkosc];
             int[] rosnaco = new int[wielkosc];
             int[] malejace = new int[wielkosc];
