@@ -8,7 +8,7 @@ namespace kolokwium
 {
     internal class PrzezWybory : czas
     {
-        public void BySelection(int[] liczby)
+        public void srtwybory(int[] liczby)
         {
             int[] dos = new int[liczby.Length];
             for (int k = 0; k < liczby.Length; k++)

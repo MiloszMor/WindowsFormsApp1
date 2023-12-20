@@ -17,10 +17,10 @@ namespace kolokwium
                 dos[k] = liczby[k];
             }
             odlicz();
-            scalanie2(dos, left, right);
+            srtScalanie(dos, left, right);
             stop();
         }
-        public void scal(int[] dos, int left, int mid, int right)
+        public void srtscalanie(int[] dos, int left, int mid, int right)
         {
             int i = left, j = mid + 1;
 
@@ -55,7 +55,7 @@ namespace kolokwium
                     dos[k] = pom[j++];
                 }
         }
-        public void scalanie2(int[] dos, int left, int right)
+        public void srtScalanie(int[] dos, int left, int right)
         {
 
             if (right <= left)
@@ -66,11 +66,11 @@ namespace kolokwium
             int srodek = (right + left) / 2;
 
 
-            scalanie2(dos, left, srodek);
-            scalanie2(dos, srodek + 1, right);
+            srtScalanie(dos, left, srodek);
+            srtScalanie(dos, srodek + 1, right);
 
 
-            scal(dos, left, srodek, right);
+            srtscalanie(dos, left, srodek, right);
         }
 
     }

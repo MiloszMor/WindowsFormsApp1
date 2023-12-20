@@ -137,15 +137,15 @@ namespace kolokwium
             {
                 if (rosn.Checked)
                 {
-                    WykonajSortowaniePrzezWstawianie("PrzezWstawienie Rosnacy", w => w.InsertionSort(up));
+                    WykonajSortowaniePrzezWstawianie("PrzezWstawienie Rosnacy", w => w.srtWstawianie(up));
                 }
                 else if (zmiejszenie.Checked)
                 {
-                    WykonajSortowaniePrzezWstawianie("PrzezWstawienie Malejace", w => w.InsertionSort(down));
+                    WykonajSortowaniePrzezWstawianie("PrzezWstawienie Malejace", w => w.srtWstawianie(down));
                 }
                 else if (Losowo.Checked)
                 {
-                    WykonajSortowaniePrzezWstawianie("PrzezWstawienie Losowe", w => w.InsertionSort(losy));
+                    WykonajSortowaniePrzezWstawianie("PrzezWstawienie Losowe", w => w.srtWstawianie(losy));
                 }
             }
 
@@ -164,15 +164,15 @@ namespace kolokwium
             {
                 if (rosn.Checked)
                 {
-                    WykonajSortowaniePrzezWybieranie("PrzezWybor Rosnacy", w => w.BySelection(up));
+                    WykonajSortowaniePrzezWybieranie("PrzezWybor Rosnacy", w => w.srtwybory(up));
                 }
                 else if (zmiejszenie.Checked)
                 {
-                    WykonajSortowaniePrzezWybieranie("PrzezWybor Malejace", w => w.BySelection(down));
+                    WykonajSortowaniePrzezWybieranie("PrzezWybor Malejace", w => w.srtwybory(down));
                 }
                 else if (Losowo.Checked)
                 {
-                    WykonajSortowaniePrzezWybieranie("PrzezWybor Losowe", w => w.BySelection(losy));
+                    WykonajSortowaniePrzezWybieranie("PrzezWybor Losowe", w => w.srtwybory(losy));
                 }
             }
 

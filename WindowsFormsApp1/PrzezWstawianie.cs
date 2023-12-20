@@ -9,7 +9,7 @@ namespace kolokwium
     internal class PrzezWstawianie : czas
     {
         
-        public void InsertionSort(int[] liczby)
+        public void srtWstawianie(int[] liczby)
         {
              int[] dos = new int[liczby.Length];
                 for (int k = 0; k < liczby.Length; k++)
